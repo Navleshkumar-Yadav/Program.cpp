@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+void pattern2(int n, int m){
+    for(int row = 0; row<n ; row++){
+        for(int col = 0; col<m; col++){
+            if(row == 0 || row == 3 || col ==  0 || col == 2){
+               cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;  // Moved outside the inner loop
+    }
+}
+
+int main(){
+    int n,m;
+    cout<<"Enter the number n : ";
+    cin>>n;
+    cout<<"Enter the number m: ";
+    cin>>m;
+    pattern2(n,m);
+}
